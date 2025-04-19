@@ -1,0 +1,687 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- styles -->
+    <link rel="stylesheet" href="./assets/css/style.css" />
+    <!-- styles -->
+    <title>Applify</title>
+  </head>
+  <body>
+    <!-- body content start -->
+    <header class="mobile-header">
+      <nav class="container">
+        <button class="hamburger jsHamburger">
+          <span>hamburger menu icon 1</span>
+          <span>hamburger menu icon 2</span>
+          <span>hamburger menu icon 3</span>
+        </button>
+        <picture class="mobile-header__logo">
+          <img src="./assets/images/icons/slack-logo.svg" alt="Brand logo" width="60" height="20">
+        </picture>
+        <ul class="mobile-header__profile">
+          <li>
+            <a href="#" title="Settings" area-label="Settings">
+              <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#1f1f1f">
+                <path
+                  d="m370-80-16-128q-13-5-24.5-12T307-235l-119 50L78-375l103-78q-1-7-1-13.5v-27q0-6.5 1-13.5L78-585l110-190 119 50q11-8 23-15t24-12l16-128h220l16 128q13 5 24.5 12t22.5 15l119-50 110 190-103 78q1 7 1 13.5v27q0 6.5-2 13.5l103 78-110 190-118-50q-11 8-23 15t-24 12L590-80H370Zm70-80h79l14-106q31-8 57.5-23.5T639-327l99 41 39-68-86-65q5-14 7-29.5t2-31.5q0-16-2-31.5t-7-29.5l86-65-39-68-99 42q-22-23-48.5-38.5T533-694l-13-106h-79l-14 106q-31 8-57.5 23.5T321-633l-99-41-39 68 86 64q-5 15-7 30t-2 32q0 16 2 31t7 30l-86 65 39 68 99-42q22 23 48.5 38.5T427-266l13 106Zm42-180q58 0 99-41t41-99q0-58-41-99t-99-41q-59 0-99.5 41T342-480q0 58 40.5 99t99.5 41Zm-2-140Z" />
+              </svg>
+            </a>
+          </li>
+          <li>
+            <a href="#" title="Profile button" class="mobile-header__profile-btn jsProfileBtn">
+              <picture>
+                <img src="./assets/images/profile.webp" alt="Profile image" width="22" height="22">
+              </picture>
+              <span class="profile__arrow">
+                profile button arrow
+              </span>
+            </a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+
+     <section class="section section-wrap">
+      <!-- Sidebar -->
+      <aside class="sidebar-menu jsSidebarMenu">
+        <picture class="sidebar-menu__logo">
+          <img src="./assets/images/icons/slack-logo.svg" alt="Brand logo" width="80" height="25">
+        </picture>
+        <nav>
+          <ul class="sidebar-menu__list" role="menu">
+            <li role="menuitem" class="is-active">
+              <a href="#" title="Dashboard">
+                <span class="sidebar-menu__icon">
+                  <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#1f1f1f">
+                    <path
+                      d="M520-600v-240h320v240H520ZM120-440v-400h320v400H120Zm400 320v-400h320v400H520Zm-400 0v-240h320v240H120Zm80-400h160v-240H200v240Zm400 320h160v-240H600v240Zm0-480h160v-80H600v80ZM200-200h160v-80H200v80Zm160-320Zm240-160Zm0 240ZM360-280Z" />
+                  </svg>
+                </span>
+                <span>
+                  Dashboard
+                </span>
+              </a>
+            </li>
+            <li role="menuitem">
+              <a href="#" title="Jobs">
+                <span class="sidebar-menu__icon">
+                  <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#1f1f1f">
+                    <path
+                      d="M160-120q-33 0-56.5-23.5T80-200v-440q0-33 23.5-56.5T160-720h160v-80q0-33 23.5-56.5T400-880h160q33 0 56.5 23.5T640-800v80h160q33 0 56.5 23.5T880-640v440q0 33-23.5 56.5T800-120H160Zm240-600h160v-80H400v80Zm400 360H600v80H360v-80H160v160h640v-160Zm-360 0h80v-80h-80v80Zm-280-80h200v-80h240v80h200v-200H160v200Zm320 40Z" />
+                  </svg>
+                </span>
+                <span>
+                  Jobs
+                </span>
+              </a>
+            </li>
+            <li role="menuitem">
+              <a href="#" title="Schedule">
+                <span class="sidebar-menu__icon">
+                  <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#1f1f1f">
+                    <path
+                      d="M200-80q-33 0-56.5-23.5T120-160v-560q0-33 23.5-56.5T200-800h40v-80h80v80h320v-80h80v80h40q33 0 56.5 23.5T840-720v560q0 33-23.5 56.5T760-80H200Zm0-80h560v-400H200v400Zm0-480h560v-80H200v80Zm0 0v-80 80Z" />
+                  </svg>
+                </span>
+                <span>
+                  Schedule
+                </span>
+              </a>
+            </li>
+            <li role="menuitem">
+              <a href="#" title="Documents">
+                <span class="sidebar-menu__icon">
+                  <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#1f1f1f">
+                    <path
+                      d="M160-160q-33 0-56.5-23.5T80-240v-480q0-33 23.5-56.5T160-800h240l80 80h320q33 0 56.5 23.5T880-640H447l-80-80H160v480l96-320h684L837-217q-8 26-29.5 41.5T760-160H160Zm84-80h516l72-240H316l-72 240Zm0 0 72-240-72 240Zm-84-400v-80 80Z" />
+                  </svg>
+                </span>
+                <span>
+                  Documents
+                </span>
+              </a>
+            </li>
+            <li role="menuitem">
+              <a href="#" title="Statistics">
+                <span class="sidebar-menu__icon">
+                  <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#1f1f1f">
+                    <path d="M200-160v-240h120v240H200Zm240 0v-440h120v440H440Zm240 0v-640h120v640H680Z" />
+                  </svg>
+                </span>
+                <span>
+                  Statistics
+                </span>
+              </a>
+            </li>
+            <li role="menuitem">
+              <a href="#" title="Community">
+                <span class="sidebar-menu__icon">
+                  <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#1f1f1f">
+                    <path
+                      d="M40-160v-112q0-34 17.5-62.5T104-378q62-31 126-46.5T360-440q66 0 130 15.5T616-378q29 15 46.5 43.5T680-272v112H40Zm720 0v-120q0-44-24.5-84.5T666-434q51 6 96 20.5t84 35.5q36 20 55 44.5t19 53.5v120H760ZM360-480q-66 0-113-47t-47-113q0-66 47-113t113-47q66 0 113 47t47 113q0 66-47 113t-113 47Zm400-160q0 66-47 113t-113 47q-11 0-28-2.5t-28-5.5q27-32 41.5-71t14.5-81q0-42-14.5-81T544-792q14-5 28-6.5t28-1.5q66 0 113 47t47 113ZM120-240h480v-32q0-11-5.5-20T580-306q-54-27-109-40.5T360-360q-56 0-111 13.5T140-306q-9 5-14.5 14t-5.5 20v32Zm240-320q33 0 56.5-23.5T440-640q0-33-23.5-56.5T360-720q-33 0-56.5 23.5T280-640q0 33 23.5 56.5T360-560Zm0 320Zm0-400Z" />
+                  </svg>
+                </span>
+                <span>
+                  Community
+                </span>
+              </a>
+            </li>
+            <li role="menuitem">
+              <a href="#" title="Message">
+                <span class="sidebar-menu__icon">
+                  <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#1f1f1f">
+                    <path
+                      d="M480-80 373-240H160q-33 0-56.5-23.5T80-320v-480q0-33 23.5-56.5T160-880h640q33 0 56.5 23.5T880-800v480q0 33-23.5 56.5T800-240H587L480-80Zm0-144 64-96h256v-480H160v480h256l64 96Zm0-336Z" />
+                  </svg>
+                </span>
+                <span>
+                  Message
+                </span>
+              </a>
+            </li>
+            <li role="menuitem">
+              <a href="#" title="Logout">
+                <span class="sidebar-menu__icon">
+                  <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#1f1f1f">
+                    <path
+                      d="M200-120q-33 0-56.5-23.5T120-200v-560q0-33 23.5-56.5T200-840h280v80H200v560h280v80H200Zm440-160-55-58 102-102H360v-80h327L585-622l55-58 200 200-200 200Z" />
+                  </svg>
+                </span>
+                <span>
+                  Logout
+                </span>
+              </a>
+            </li>
+          </ul>
+          <div class="premium-card">
+            <span class="premium-card__bg">premium card background</span>
+            <picture>
+              <img src="./assets/images/sidebar-image.png" alt="Upgrade to premium image" width="120" height="90">
+            </picture>
+            <article>
+              <h3>
+                Upgrade to Premium
+              </h3>
+              <p>Go pro to unlock more features</p>
+              <a href="#" title="Upgrade" class="btn">Upgrade</a>
+            </article>
+          </div>
+        </nav>
+      </aside>
+      <!-- Sidebar -->
+
+      <!-- Main Content -->
+       <main>
+         <div class="container">
+           <header class="header">
+             <h1>Dashboard</h1>
+             <search class="search-form">
+               <form>
+                 <input type="text" name="search" id="search" placeholder="search">
+                 <label for="search">
+                   search
+                 </label>
+                 <button type="submit" aria-label="Submit Search">
+                   <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#1f1f1f">
+                     <path
+                       d="M784-120 532-372q-30 24-69 38t-83 14q-109 0-184.5-75.5T120-580q0-109 75.5-184.5T380-840q109 0 184.5 75.5T640-580q0 44-14 83t-38 69l252 252-56 56ZM380-400q75 0 127.5-52.5T560-580q0-75-52.5-127.5T380-760q-75 0-127.5 52.5T200-580q0 75 52.5 127.5T380-400Z" />
+                   </svg>
+                 </button>
+               </form>
+             </search>
+           </header>
+
+           <!-- Stats Cards -->
+            <div class="stats-card__wrap">
+             <div class="stats-card">
+               <header>
+                 <button class="stats-card__btn">
+                   <span>view more</span>
+                   <span>view more</span>
+                   <span>view more</span>
+                 </button>
+               </header>
+               <article>
+                 <div class="stats-card__cnt">
+                   <h2>
+                     <span>
+                       Total applications
+                     </span>
+                     <span class="stats-card__count">
+                       5672
+                     </span>
+                   </h2>
+                   <div class="stats-card__status">
+                     <span class="stats__icon">
+                       <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#1f1f1f">
+                         <path d="m216-160-56-56 464-464H360v-80h400v400h-80v-264L216-160Z" />
+                       </svg>
+                     </span>
+                     <p>
+                       <span class="stats__count">
+                         +14%
+                       </span>
+                       <span>
+                         Inc
+                       </span>
+                     </p>
+                   </div>
+                 </div>
+                 <div class="stats-card__donut donut">
+                   <div class="donut__wrap">
+                     <h3>
+                       +74%
+                     </h3>
+                   </div>
+                 </div>
+               </article>
+             </div>
+             <div class="stats-card is-yellow">
+               <header>
+                 <button class="stats-card__btn">
+                   <span>view more</span>
+                   <span>view more</span>
+                   <span>view more</span>
+                 </button>
+               </header>
+               <article>
+                 <div class="stats-card__cnt">
+                   <h2>
+                     <span>
+                       Short listed candidates
+                     </span>
+                     <span class="stats-card__count">
+                       3045
+                     </span>
+                   </h2>
+                   <div class="stats-card__status">
+                     <span class="stats__icon">
+                       <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#1f1f1f">
+                         <path d="m216-160-56-56 464-464H360v-80h400v400h-80v-264L216-160Z" />
+                       </svg>
+                     </span>
+                     <p>
+                       <span class="stats__count">
+                         +0.6%
+                       </span>
+                       <span>
+                         Inc
+                       </span>
+                     </p>
+                   </div>
+                 </div>
+                 <div class="stats-card__donut donut">
+                   <div class="donut__wrap">
+                     <h3>
+                       +60%
+                     </h3>
+                   </div>
+                 </div>
+               </article>
+             </div>
+             <div class="stats-card is-orange">
+               <header>
+                 <button class="stats-card__btn">
+                   <span>view more</span>
+                   <span>view more</span>
+                   <span>view more</span>
+                 </button>
+               </header>
+               <article>
+                 <div class="stats-card__cnt">
+                   <h2>
+                     <span>
+                       Rejected candidates
+                     </span>
+                     <span class="stats-card__count">
+                       1055
+                     </span>
+                   </h2>
+                   <div class="stats-card__status">
+                     <span class="stats__icon">
+                       <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#1f1f1f">
+                         <path d="m216-160-56-56 464-464H360v-80h400v400h-80v-264L216-160Z" />
+                       </svg>
+                     </span>
+                     <p>
+                       <span class="stats__count">
+                         +04%
+                       </span>
+                       <span>
+                         Dec
+                       </span>
+                     </p>
+                   </div>
+                 </div>
+                 <div class="stats-card__donut donut">
+                   <div class="donut__wrap">
+                     <h3>
+                       +46%
+                     </h3>
+                   </div>
+                 </div>
+               </article>
+             </div>
+            </div>
+           <!-- Stats Cards -->
+
+          <!-- Middle Section -->
+            <div class="stats-graph__wrap">
+              <div class="stats-graph">
+                <header>
+                  <h2>
+                    Statistics of Active Applications
+                  </h2>
+                  <div class="calendar">
+                    <div class="calendar__cnt">
+                      <figure>
+                        <img src="./assets/images/icons/calendar.svg" alt="calendar image" width="25" height="25">
+                      </figure>
+                      <p>Week</p>
+                    </div>
+                    <div class="calendar__input">
+                      <input type="week" name="applications-calendar" id="applications-calendar">
+                      <label for="applications-calendar">applications calendar</label>
+                    </div>
+                  </div>
+                </header>
+                <div class="stats-graph__container">
+                  <canvas id="jsStatisticsCanvas" style="width:100%;"></canvas>
+                </div>
+                <footer>
+                  <div class="checkbox">
+                    <input class="checkbox__input" id="check1" type="checkbox" checked>
+                    <span class="slider"></span>
+                    <label for="check1">Applications</label>
+                  </div>
+                  <div class="checkbox is-shortlisted">
+                    <input class="checkbox__input" id="check2" type="checkbox" checked>
+                    <span class="slider"></span>
+                    <label for="check2">Shortlisted</label>
+                  </div>
+                  <div class="checkbox is-rejected">
+                    <input class="checkbox__input" id="check3" type="checkbox" checked>
+                    <span class="slider"></span>
+                    <label for="check3">rejected</label>
+                  </div>
+                  <div class="checkbox is-hold">
+                    <input class="checkbox__input" id="check4" type="checkbox" checked>
+                    <span class="slider"></span>
+                    <label for="check4">on hold</label>
+                  </div>
+                </footer>
+              </div>
+              
+              <div class="stats-graph stats-graph--acquisitions">
+                <header>
+                  <h2>
+                    Acquisitions
+                  </h2>
+                  <div class="calendar">
+                    <div class="calendar__cnt">
+                      <figure>
+                        <img src="./assets/images/icons/calendar.svg" alt="calendar image" width="25" height="25">
+                      </figure>
+                      <p>Month</p>
+                    </div>
+                    <div class="calendar__input">
+                      <input type="month" name="acquisitions-calendar" id="acquisitions-calendar">
+                      <label for="acquisitions-calendar">Acquisitions calendar</label>
+                    </div>
+                  </div>
+                </header>
+                <ul role="list">
+                  <li role="listitem">
+                    <div class="acquisitions__row">
+                      <p>Applications</p>
+                      <div class="acquisitions__bar-wrap">
+                        <span class="acquisitions__bar">acquisitions applications bar</span>
+                        <span class="acquisitions__count">80%</span>
+                      </div>
+                    </div>
+                  </li>
+                  <li role="listitem">
+                    <div class="acquisitions__row is-shortlisted">
+                      <p>shortlisted</p>
+                      <div class="acquisitions__bar-wrap">
+                        <span class="acquisitions__bar">acquisitions shortlisted bar</span>
+                        <span class="acquisitions__count">55%</span>
+                      </div>
+                    </div>
+                  </li>
+                  <li role="listitem">
+                    <div class="acquisitions__row is-rejected">
+                      <p>rejected</p>
+                      <div class="acquisitions__bar-wrap">
+                        <span class="acquisitions__bar">acquisitions rejected bar</span>
+                        <span class="acquisitions__count">47%</span>
+                      </div>
+                    </div>
+                  </li>
+                  <li role="listitem">
+                    <div class="acquisitions__row is-hold">
+                      <p>on hold</p>
+                      <div class="acquisitions__bar-wrap">
+                        <span class="acquisitions__bar">acquisitions on hold bar</span>
+                        <span class="acquisitions__count">35%</span>
+                      </div>
+                    </div>
+                  </li>
+                  <li role="listitem">
+                    <div class="acquisitions__row is-finalised">
+                      <p>finalised</p>
+                      <div class="acquisitions__bar-wrap">
+                        <span class="acquisitions__bar">acquisitions finalised bar</span>
+                        <span class="acquisitions__count">24%</span>
+                      </div>
+                    </div>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          <!-- Middle Section -->
+
+          <!-- Bottom Section -->
+            <div class="stats-graph__wrap">
+              <div class="stats-graph">
+                <header>
+                  <h2>
+                    Applications Received Time
+                  </h2>
+                  <div class="calendar">
+                    <div class="calendar__cnt">
+                      <figure>
+                        <img src="./assets/images/icons/calendar.svg" alt="calendar image" width="25" height="25">
+                      </figure>
+                      <p>Today</p>
+                    </div>
+                    <div class="calendar__input">
+                      <input type="date" name="applications-calendar2" id="applications-calendar2">
+                      <label for="applications-calendar2">applications calendar</label>
+                    </div>
+                  </div>
+                </header>
+                <div class="stats-graph__container">
+                  <canvas id="jsApplicationsTimeCanvas" style="width:100%;"></canvas>
+                </div>
+              </div>
+
+              <article class="candidates-card">
+                <h2>Candidates by Gender</h2>
+                <div class="candidates-card__donut donut">
+                  <div class="donut__wrap">
+                    <div class="candidates-card__donut-logo">
+                      <figure>
+                        <img src="./assets/images/icons/gender.svg" alt="Gender logo" width="25" height="25">
+                      </figure>
+                    </div>
+                  </div>
+                </div>
+                <footer class="candidates-card__footer">
+                  <p>male</p>
+                  <p class="is-orange">female</p>
+                </footer>
+              </article>
+            </div>
+          <!-- Bottom Section -->
+        </div>
+      </main>
+      <!-- Main Content -->
+
+      <!-- Profile section -->
+       <aside class="profile jsProfileSidebar">
+        <header>
+          <ul class="profile__header-list">
+            <li>
+              <p class="profile__info">
+                ?
+              </p>
+            </li>
+            <li>
+              <a href="#" title="Settings" area-label="Settings">
+                <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#1f1f1f">
+                  <path
+                    d="m370-80-16-128q-13-5-24.5-12T307-235l-119 50L78-375l103-78q-1-7-1-13.5v-27q0-6.5 1-13.5L78-585l110-190 119 50q11-8 23-15t24-12l16-128h220l16 128q13 5 24.5 12t22.5 15l119-50 110 190-103 78q1 7 1 13.5v27q0 6.5-2 13.5l103 78-110 190-118-50q-11 8-23 15t-24 12L590-80H370Zm70-80h79l14-106q31-8 57.5-23.5T639-327l99 41 39-68-86-65q5-14 7-29.5t2-31.5q0-16-2-31.5t-7-29.5l86-65-39-68-99 42q-22-23-48.5-38.5T533-694l-13-106h-79l-14 106q-31 8-57.5 23.5T321-633l-99-41-39 68 86 64q-5 15-7 30t-2 32q0 16 2 31t7 30l-86 65 39 68 99-42q22 23 48.5 38.5T427-266l13 106Zm42-180q58 0 99-41t41-99q0-58-41-99t-99-41q-59 0-99.5 41T342-480q0 58 40.5 99t99.5 41Zm-2-140Z" />
+                </svg>
+              </a>
+            </li>
+            <li>
+              <a href="#" title="Profile button" class="profile__header-btn">
+                <picture>
+                  <img src="./assets/images/profile.webp" alt="Profile image" width="22" height="22">
+                </picture>
+                <span class="profile__arrow">
+                  profile button arrow
+                </span>
+              </a>
+            </li>
+          </ul>
+        </header>
+        <div class="profile__card">
+          <figure>
+            <img src="./assets/images/profile.webp" alt="Profile image" width="200" height="200">
+          </figure>
+          <article>
+            <h2>Candace jules</h2>
+            <p>Director of recruiting</p>
+            <a href="#" title="Location">
+              <span class="profile__card-location">
+                <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#1f1f1f">
+                  <path
+                    d="M480-480q33 0 56.5-23.5T560-560q0-33-23.5-56.5T480-640q-33 0-56.5 23.5T400-560q0 33 23.5 56.5T480-480Zm0 294q122-112 181-203.5T720-552q0-109-69.5-178.5T480-800q-101 0-170.5 69.5T240-552q0 71 59 162.5T480-186Zm0 106Q319-217 239.5-334.5T160-552q0-150 96.5-239T480-880q127 0 223.5 89T800-552q0 100-79.5 217.5T480-80Zm0-480Z" />
+                </svg>
+              </span>
+              <span>New York,US</span>
+            </a>
+          </article>
+        </div>
+        <div class="profile__jobs">
+          <header>
+            <h3>
+              jobs posted
+            </h3>
+            <div class="profile__jobs-btns">
+              <button class="btn btn--blue">
+                + Add
+              </button>
+              <button class="profile__jobs-btn">
+                Next button
+              </button>
+            </div>
+          </header>
+          <ul class="profile__jobs-cards">
+            <li>
+              <div class="job-card">
+                <p class="job-card__count">
+                  <span>
+                    95
+                  </span>
+                </p>
+                <article>
+                  <div class="checkbox-wrap">
+                    <div class="checkbox">
+                      <input class="checkbox__input" id="check5" name="check5" type="checkbox">
+                      <span class="slider"></span>
+                      <label for="check5">jobs</label>
+                    </div>
+                  </div>
+                  <h4>sr.android developer</h4>
+                  <p>total applications</p>
+                </article>
+              </div>
+            </li>
+            <li>
+              <div class="job-card is-blue">
+                <p class="job-card__count">
+                  <span>
+                    80
+                  </span>
+                </p>
+                <article>
+                  <div class="checkbox-wrap">
+                    <div class="checkbox">
+                      <input class="checkbox__input" id="check6" name="check6" type="checkbox">
+                      <span class="slider"></span>
+                      <label for="check6">jobs</label>
+                    </div>
+                  </div>
+                  <h4>UI/UX designer</h4>
+                  <p>total applications</p>
+              </article>
+              </div>
+            </li>
+          </ul>
+        </div>
+        <div class="profile__reminders">
+          <header>
+            <h3>reminders</h3>
+            <button aria-label="Reminders">
+              <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#1f1f1f">
+                <path
+                  d="M160-200v-80h80v-280q0-83 50-147.5T420-792v-28q0-25 17.5-42.5T480-880q25 0 42.5 17.5T540-820v28q80 20 130 84.5T720-560v280h80v80H160Zm320-300Zm0 420q-33 0-56.5-23.5T400-160h160q0 33-23.5 56.5T480-80ZM320-280h320v-280q0-66-47-113t-113-47q-66 0-113 47t-47 113v280Z" />
+              </svg>
+            </button>
+          </header>
+          <ul>
+            <li>
+              <div class="reminder-card">
+                <figure>
+                  <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#1f1f1f">
+                    <path
+                      d="M480-80q-75 0-140.5-28.5t-114-77q-48.5-48.5-77-114T120-440h80q0 117 81.5 198.5T480-160q117 0 198.5-81.5T760-440q0-117-81.5-198.5T480-720h-6l62 62-56 58-160-160 160-160 56 58-62 62h6q75 0 140.5 28.5t114 77q48.5 48.5 77 114T840-440q0 75-28.5 140.5t-77 114q-48.5 48.5-114 77T480-80Z" />
+                  </svg>
+                </figure>
+                <article>
+                  <div class="reminder-card__cnt">
+                    <h4>Your subscription expires <b>Today</b>.</h4>
+                    <a href="#" title="Renew today">Renew today</a>
+                  </div>
+                  <time datetime="2025-04-14 06:30">06:30</time>
+                </article>
+              </div>
+            </li>
+            <li>
+              <div class="reminder-card is-yellow">
+                <figure>
+                  <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#1f1f1f">
+                    <path
+                      d="M200-200h560v-367L567-760H200v560Zm0 80q-33 0-56.5-23.5T120-200v-560q0-33 23.5-56.5T200-840h400l240 240v400q0 33-23.5 56.5T760-120H200Zm80-160h400v-80H280v80Zm0-160h400v-80H280v80Zm0-160h280v-80H280v80Zm-80 400v-560 560Z" />
+                  </svg>
+                </figure>
+                <article>
+                  <div class="reminder-card__cnt">
+                    <h4>There are four new applications for <span><b>IOS developer </b>post</span></h4>
+                  </div>
+                  <time datetime="2025-04-14 05:30">05:30</time>
+                </article>
+              </div>
+            </li>
+            <li>
+              <div class="reminder-card is-orange">
+                <figure>
+                  <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#1f1f1f">
+                    <path
+                      d="M480-80q-75 0-140.5-28.5t-114-77q-48.5-48.5-77-114T120-440h80q0 117 81.5 198.5T480-160q117 0 198.5-81.5T760-440q0-117-81.5-198.5T480-720h-6l62 62-56 58-160-160 160-160 56 58-62 62h6q75 0 140.5 28.5t114 77q48.5 48.5 77 114T840-440q0 75-28.5 140.5t-77 114q-48.5 48.5-114 77T480-80Z" />
+                  </svg>
+                </figure>
+                <article>
+                  <div class="reminder-card__cnt">
+                    <h4>You have closed the job post for <span><b>design lead</b></span></h4>
+                  </div>
+                  <time datetime="2025-04-14 04:30">04:30</time>
+                </article>
+              </div>
+            </li>
+            <li>
+              <div class="reminder-card is-green">
+                <figure>
+                  <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#1f1f1f">
+                    <path
+                      d="M160-160q-33 0-56.5-23.5T80-240v-480q0-33 23.5-56.5T160-800h240l80 80h320q33 0 56.5 23.5T880-640H447l-80-80H160v480l96-320h684L837-217q-8 26-29.5 41.5T760-160H160Zm84-80h516l72-240H316l-72 240Zm0 0 72-240-72 240Zm-84-400v-80 80Z" />
+                  </svg>
+                </figure>
+                <article>
+                  <div class="reminder-card__cnt">
+                    <h4>You have drafted a job post for <span>Web developer.</span></h4>
+                  </div>
+                  <time datetime="2025-04-14 03:30">03:30</time>
+                </article>
+              </div>
+            </li>
+          </ul>
+        </div>
+       </aside>
+      <!-- Profile section -->
+     </section>
+    <!-- body content end -->
+
+    <!-- scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    </script>
+    <script src="./assets/js/script.js"></script>
+    <!-- scripts -->
+  </body>
+</html>

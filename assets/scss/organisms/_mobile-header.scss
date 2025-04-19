@@ -1,0 +1,145 @@
+.mobile-header {
+  width: 100%;
+  position: sticky;
+  top: 0;
+  left: 0;
+  padding: 20px 0;
+  background-color: var(--color-white);
+  z-index: 999;
+  
+  nav {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 20px;
+  }
+
+  .hamburger {
+    width: 25px;
+    height: 25px;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 4px;
+    font-size: 0;
+    line-height: 0;
+    color: transparent;
+    text-decoration: none;
+    box-shadow: none;
+    border: none;
+    outline: none;
+
+    span {
+      width: 90%;
+      height: 2px;
+      display: block;
+      background-color: var(--color-black);
+
+      @include transition();
+    }
+
+    &.is-active {
+      span {
+        margin: 0;
+        
+        &:nth-child(1) {
+          transform: translate(0px,2.5px) rotate(45deg);
+        }
+
+        &:nth-child(2) {
+          transform: translate(-1px,-3px) rotate(-45deg);
+        }
+        
+        &:nth-child(3) {
+          display: none;
+          opacity: 0;
+          visibility: hidden;
+        }
+      }
+    }
+  }
+
+  &__logo {
+    width: 60px;
+    height: 20px;
+
+    img {
+      width: 100%;
+      height: auto;
+      object-fit: contain;
+    }
+  }
+
+  &__profile {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    margin-left: auto;
+
+    li {
+      width: 25px;
+      height: 25px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      &:has(.mobile-header__profile-btn) {
+        width: 40px;
+      }
+    }
+
+    a {
+      width: 100%;
+      height: 100%;
+      display: inline-block;
+
+      svg {
+        width: 100%;
+        height: auto;
+      }
+
+      span {
+        font-size: 0;
+        line-height: 0;
+        text-decoration: none;
+      }
+
+      &.mobile-header__profile-btn {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 5px;
+        picture {
+          display: block;
+          width: 25px;
+          height: 25px;
+          border-radius: 50%;
+          overflow: hidden;
+
+          img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+          }
+        }
+      } 
+
+      .profile__arrow {
+        display: inline-block;
+        width: 6px;
+        height: 6px;
+        transform: rotate(45deg);
+        border-right: 1px solid var(--color-black);
+        border-bottom: 1px solid var(--color-black);
+      }
+    }
+  }
+
+  @include desktop {
+    display: none;
+  }
+}

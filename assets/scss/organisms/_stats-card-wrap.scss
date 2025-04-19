@@ -1,0 +1,29 @@
+@import "../molecules/stats-card";
+
+.stats-card__wrap {
+  @media screen and (min-width: 720px) {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    gap: 16px 18px;
+    margin-bottom: 16px;
+  }
+  
+  .stats-card {
+    @media screen and (min-width: 720px) {
+      @include col-width(2,18);
+    }    
+
+    @include tablet-pro {
+      @include col-width(3,18);
+    }
+    
+    @media screen and (min-width: 1199px) {
+      @include col-width(2,18);
+    }
+    
+    @include desktop-lg {
+      @include col-width(3,18);
+    }
+  }
+}

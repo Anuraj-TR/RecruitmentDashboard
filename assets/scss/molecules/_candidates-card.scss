@@ -1,0 +1,107 @@
+.candidates-card {
+  background-color: var(--color-white);
+  padding: 16px;
+  border-radius: 5px;
+  margin-top: 16px;
+  max-width: 500px;
+
+
+  @include tablet-pro {
+    margin-top: 0;
+  }
+
+  @include desktop-mx {
+    max-width: unset;
+  }
+
+  h2 {
+    font-size: 20px;
+    font-weight: 500;
+    color: var(--color-black);
+    margin-bottom: 24px;
+
+    @include desktop {
+      font-size: 18px;
+    }
+  }
+
+  &__donut {
+    --width: 250px;
+    --height: 250px;
+    --bg1: var(--color-orange);
+    --bg2: var(--color-blue);
+    --percentage: 65%;
+    --border: 25px;
+    
+    margin: 30px auto;
+    
+    @include desktop {
+      --width: 200px;
+      --height: 200px;
+    }
+
+    .donut__wrap {
+      background-color: var(--color-gray-1);
+    }
+
+    &-logo {
+      background-color: var(--color-white);
+      width: 75%;
+      height: 75%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 50%;
+      box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+
+    }
+
+    figure {
+      background-color: var(--color-light-brown-40);
+      width: 70px;
+      height: 70px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      svg,
+      img {
+        width: 30px;
+        height: 30px;
+      }
+    }
+  }
+
+  .candidates-card__footer {
+    padding-top: 0;
+    justify-content: center;
+    gap: 24px;
+    border: none;
+
+    p {
+      position: relative;
+      padding-left: 20px;
+      font-weight: 500;
+      text-transform: capitalize;
+
+      &::after {
+        content: '';
+        position: absolute;
+        top: 50%;
+        left: 10px;
+        transform: translate(-10px, -50%);
+        width: 10px;
+        height: 10px;
+        border-radius: 50%;
+        background-color: var(--color-blue);
+      }
+
+      &.is-orange {
+        &::after {
+          background-color: var(--color-orange);
+        }
+      }
+    }
+  }
+}

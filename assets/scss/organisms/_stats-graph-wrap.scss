@@ -1,0 +1,72 @@
+@import "../molecules/stats-graph";
+
+.stats-graph__wrap {
+  margin-bottom: 16px;
+
+  @include tablet-pro {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 16px;
+    max-height: 465px;
+  }
+  
+  @include desktop {
+    max-height: unset;
+  }
+  
+  @media screen and (min-width: 1320px) {
+    max-height: 465px;
+  }
+
+  .stats-graph {
+    @include tablet-pro {
+      width: calc(66.66% - 9px);
+    }    
+    
+    @include desktop {
+      width: 100%;
+    }
+    
+    @media screen and (min-width: 1320px) {
+      width: calc(56.66% - 9px);
+    }
+    
+    @include desktop-lg {
+      width: calc(66.66% - 9px);
+    }
+  }
+  
+  .stats-graph--acquisitions,
+  .candidates-card {
+    @include tablet-pro {
+      width: calc(33.33% - 9px);
+    }
+    
+    @include desktop {
+      width: 100%;
+    }
+    
+    @media screen and (min-width: 1320px) {
+      width: calc(43.33% - 9px);
+    }
+    
+    @include desktop-lg {
+      width: calc(33.33% - 9px);
+    }
+  }
+  
+  footer {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 16px;
+    padding-top: 16px;
+    border-top: 1px solid var(--color-gray-2);
+    
+    @include desktop {
+      gap: 32px;
+    }
+  }
+}

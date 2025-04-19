@@ -1,0 +1,228 @@
+.stats-graph {
+  background-color: var(--color-white);
+  padding: 16px;
+  border-radius: 5px;
+
+  & + .stats-graph {
+    margin-top: 16px;
+
+    @include tablet-pro {
+      margin-top: 0;
+    }
+  }
+
+  header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 0 20px;
+
+    h2 {
+      font-size: 20px;
+      font-weight: 500;
+      color: var(--color-black);
+    }
+  }
+
+  .calendar {
+    position: relative;
+
+    &__cnt {
+      display: flex;
+      align-items: center;
+      justify-content: flex-start;
+      gap: 4px;
+
+      p {
+        padding-right: 15px;
+        position: relative;
+
+        &::after {
+          content: '';
+          position: absolute;
+          top: 50%;
+          right: 0;
+          width: 8px;
+          height: 8px;
+          border-radius: 0;
+          border-right: 1px solid var(--color-black);
+          border-bottom: 1px solid var(--color-black);
+          transform: translateY(-50%) rotateZ(45deg);
+        }
+      }
+    }
+
+    &__input {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+
+      input {
+        border: none;
+        outline: none;
+        padding: 0;
+        margin: 0;
+        position: relative;
+        opacity: 0;
+        width: 100%;
+        height: 100%;
+
+        &::-webkit-calendar-picker-indicator {
+          background: transparent;
+          bottom: 0;
+          color: transparent;
+          cursor: pointer;
+          height: auto;
+          left: 0;
+          position: absolute;
+          right: 0;
+          top: 0;
+          width: auto;
+        }
+      }
+
+      label {
+        font-size: 0;
+        line-height: 0;
+        text-decoration: none;
+      }
+    }
+  }
+
+  &__container {
+    width: 100%;
+
+    canvas {
+      @include tablet-pro {
+        max-height: 230px;
+      }
+      
+      &#jsApplicationsTimeCanvas {
+        @include tablet-pro {
+          max-height: 260px;
+        }
+      }
+    }
+  }
+
+  &--acquisitions {
+    ul {
+      display: flex;
+      flex-direction: column;
+
+      li {
+        padding: 16px;
+        &:not(:first-child) {
+          border-top: 1px solid var(--color-gray-2);
+        }
+      }
+    }
+    .acquisitions__row {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 4px;
+
+      p {
+        padding: 0 14px;
+        position: relative;
+        color: var(--color-black);
+        text-transform: capitalize;
+        width: 45%;
+
+        &::after {
+          content: '';
+          position: absolute;
+          top: 50%;
+          left: 4px;
+          width: 10px;
+          height: 10px;
+          transform: translate(-50%, -50%);
+          border-radius: 50%;
+          background-color: var(--color-blue);
+        }
+      }
+
+      &.is-shortlisted {
+        p {
+          &::after {
+            background-color: var(--color-yellow);
+          }
+        }
+
+        .acquisitions__bar-wrap .acquisitions__bar{
+          --bar-percentage: 55%;
+          --bar-color: var(--color-yellow);
+        }
+      }
+
+      &.is-rejected {
+        p {
+          &::after {
+            background-color: var(--color-orange);
+          }
+        }
+
+        .acquisitions__bar-wrap .acquisitions__bar{
+          --bar-percentage: 47%;
+          --bar-color: var(--color-orange);
+        }
+      }
+
+      &.is-hold {
+        p {
+          &::after {
+            background-color: var(--color-blue-50);
+          }
+        }
+
+        .acquisitions__bar-wrap .acquisitions__bar{
+          --bar-percentage: 35%;
+          --bar-color: var(--color-blue-50);
+        }
+      }
+
+      &.is-finalised {
+        p {
+          &::after {
+            background-color: var(--color-light-green);
+          }
+        }
+
+        .acquisitions__bar-wrap .acquisitions__bar{
+          --bar-percentage: 24%;
+          --bar-color: var(--color-light-green);
+        }
+      }
+    }
+
+    .acquisitions__bar-wrap {
+      display: flex;
+      align-items: center;
+      justify-content: flex-end;
+      gap: 4px;
+      flex: 1;
+
+      span {
+        display: inline-block;
+
+        &.acquisitions__bar {
+          --bar-percentage: 80%;
+          --bar-color: var(--color-blue);
+
+          font-size: 0;
+          line-height: 0;
+          text-decoration: none;
+          color: transparent;
+          flex: 1;
+          height: 5px;
+          border-radius: 3px;
+          background: var(--bar-color);
+          background: linear-gradient(90deg, var(--bar-color) 0% var(--bar-percentage), var(--color-gray) var(--bar-percentage) 100%);
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,160 @@
+.stats-card {
+  position: relative;
+  background-color: var(--color-white);
+  padding: 16px;
+  border-radius: 5px;
+  margin-bottom: 16px;
+
+
+  @media screen and (min-width: 720px) {
+    margin-bottom: 0;
+  } 
+
+  header {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+  }
+
+  &__btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 4px;
+
+    span {
+      width: 5px;
+      height: 5px;
+      display: inline-block;
+      border-radius: 50%;
+      background-color: var(--color-gray);
+      font-size: 0;
+      line-height: 0;
+      text-decoration: none;
+      color: transparent;
+    }
+  }
+
+  article {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 16px 0;
+  }
+
+  &__cnt {
+    max-width: calc(100% - 75px);
+    h2 {
+      font-size: 16px;
+      font-weight: 500;
+      color: var(--color-gray);
+
+      span {
+        display: block;
+      }
+
+      .stats-card__count {
+        font-size: 24px;
+        font-weight: 700;
+        color: var(--color-black);
+        margin: 8px 0;
+      }
+    }
+  }
+
+  &__status {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+
+    .stats__icon {
+      width: 20px;
+      height: 20px;
+      border-radius: 50%;
+      background-color: rgba(109, 2, 249, 0.3);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      svg {
+        width: 60%;
+        height: 60%;
+        object-fit: cover;
+
+        path {
+          fill: var(--color-blue);
+        }
+      }
+    }
+
+    p {
+      font-size: 14px;
+      font-weight: 500;
+      padding-left: 4px;
+      color: var(--color-blue);
+    }
+  }
+
+  &__donut {
+    --width: 70px;
+    --height: 70px;
+    --percentage: 74%;
+    --border: 15px;
+
+    h3 {
+      font-size: 16px;
+      font-weight: 500;
+      color: var(--color-blue);
+    }
+  }
+
+  &.is-yellow {
+    .stats-card__status {
+      p {
+        color: var(--color-yellow);
+      }
+
+      .stats__icon {
+        background-color: rgba(250, 189, 7, 0.3);
+
+        svg path {
+          fill: var(--color-yellow);
+        }
+      }
+    }
+
+    .stats-card__donut {
+      --percentage: 60%;
+      --bg1: var(--color-yellow);
+
+      h3 {
+        color: var(--color-yellow);
+      }
+    }
+  }
+
+  &.is-orange {
+    .stats-card__status {
+      p {
+        color: var(--color-orange);
+      }
+
+      .stats__icon {
+        background-color: rgba(251, 120, 72, 0.3);
+
+        svg path {
+          fill: var(--color-orange);
+        }
+      }
+    }
+
+    .stats-card__donut {
+      --percentage: 46%;
+      --bg1: var(--color-orange);
+
+      h3 {
+        color: var(--color-orange);
+      }
+    }
+  }
+}

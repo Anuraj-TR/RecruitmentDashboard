@@ -1,0 +1,42 @@
+@use "sass:math";
+
+@mixin transition(
+  $properties: all,
+  $duration: 0.3s,
+  $timing-function: ease-in-out
+) {
+  transition: $properties $duration $timing-function;
+}
+
+@function rnd($number, $places: 0) {
+  $factor: math.pow(10, $places);
+
+  @return math.div(math.round($number * $factor), $factor);
+}
+
+@mixin col-width($card-number, $gap) {
+  $card-ratio: rnd(math.percentage(math.div(1, $card-number)), 5);
+  $total-gap: ($gap * ($card-number - 1));
+  $individual-gap: math.div($total-gap, $card-number);
+
+  width: calc(#{$card-ratio} - (#{$individual-gap}) * 1px);
+
+  @debug $gap, $card-number;
+  @debug $total-gap;
+}
+
+@mixin autofill($background-color: #fff, $text-color: #000) {
+  input:-webkit-autofill,
+  input:-webkit-autofill:hover,
+  input:-webkit-autofill:focus,
+  textarea:-webkit-autofill,
+  textarea:-webkit-autofill:hover,
+  textarea:-webkit-autofill:focus,
+  select:-webkit-autofill,
+  select:-webkit-autofill:hover,
+  select:-webkit-autofill:focus {
+    -webkit-box-shadow: 0 0 0 1000px $background-color inset;
+    -webkit-text-fill-color: $text-color;
+    transition: background-color 5000s ease-in-out 0s;
+  }
+}

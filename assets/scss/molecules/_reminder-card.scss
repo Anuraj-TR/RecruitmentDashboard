@@ -1,0 +1,92 @@
+.reminder-card {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 6px;
+
+  figure {
+    width: 35px;
+    height: 35px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 5px;
+    background-color: var(--color-blue-30);
+
+    svg,
+    img {
+      width: 15px;
+      height: auto;
+
+      path {
+        fill: var(--color-blue);
+      }
+    }
+  }
+
+  article {
+    display: flex;
+    flex: 1;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 6px;
+  }
+
+  h4 {
+    font-size: 10px;
+    font-weight: 500;
+
+    span {
+      display: block;
+      margin-top: 4px;
+    }
+  }
+
+  b,
+  strong {
+    font-weight: 700;
+  }
+
+  time {
+    font-size: 10px;
+    font-weight: 500;
+    color: var(--color-gray);
+  }
+
+  a {
+    font-size: 10px;
+    font-weight: 500;
+    text-transform: capitalize;
+    color: var(--color-blue);
+  }
+
+  &.is-yellow {
+    figure {
+      background-color: var(--color-yellow-30);
+
+      svg path {
+        fill: var(--color-yellow);
+      }
+    }
+  }
+
+  &.is-orange {
+    figure {
+      background-color: var(--color-orange-30);
+
+      svg path {
+        fill: var(--color-orange);
+      }
+    }
+  }
+
+  &.is-green {
+    figure {
+      background-color: var(--color-light-green-30);
+
+      svg path {
+        fill: var(--color-light-green);
+      }
+    }
+  }
+}

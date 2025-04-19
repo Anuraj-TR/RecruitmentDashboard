@@ -1,0 +1,103 @@
+.job-card {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 8px;
+  background-color: var(--color-orange);
+  padding: 18px 16px;
+  border-radius: 5px;
+
+  @include transition();
+
+  .checkbox-wrap {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+  }
+
+  .checkbox {
+    width: 30px;
+    height: 15px;
+    padding-left: 30px;
+
+    input {
+      cursor: pointer;
+
+      &[type="checkbox"]:checked + .slider{
+        background: linear-gradient(to bottom, #b3b3b3, #e6e6e6);
+
+        &::after {
+          transform: translate(0);
+        }
+      }
+    }
+
+    label {
+      font-size: 0;
+      line-height: 0;
+      color: transparent;
+    }
+
+    .slider {
+      &::after {
+        background-color: var(--color-orange);
+        transform: translateX(15px);
+      }
+    }
+  }
+
+  &__count {
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(255, 255, 255, 0.2);
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+    border-radius: 5px;
+
+    span {
+      display: inline-block;
+      font-size: 18px;
+      font-weight: 500;
+      color: var(--color-white);
+    }
+  }
+  
+  article {
+    color: var(--color-white);
+
+    h4,
+    p {
+      text-transform: capitalize;
+    }
+
+    h4 {
+      font-size: 14px;
+      margin-bottom: 4px;
+    }
+
+    p {
+      font-size: 12px;
+    }
+  }
+
+  &.is-blue {
+    background-color: var(--color-blue);
+
+    .checkbox {
+      .slider {
+        &::after {
+          background-color: var(--color-blue);
+        }
+      }
+    }
+  }
+
+  &:has(.checkbox input:checked) {
+    opacity: 0.5;
+  }
+}

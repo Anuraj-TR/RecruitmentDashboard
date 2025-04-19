@@ -1,0 +1,82 @@
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 32px 0;
+
+  h1 {
+    font-size: 24px;
+    font-weight: 500;
+    color: var(--color-black);
+    flex: 1;
+  }
+
+  .search-form {
+    width: 45%;
+    max-width: 250px;
+    background-color: #E2E5FB;
+    border-radius: 5px;
+    
+    form {
+      width: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: flex-end;
+    }
+
+    label {
+      font-size: 0;
+      line-height: 0;
+      visibility: hidden;
+    }
+    
+    input {
+      display: inline-block;
+      flex: 1;
+      max-width: calc(100% - 32px);
+      padding: 8px 0 8px 8px;
+      background-color: transparent;
+      border: none;
+      outline: none;
+      color: var(--color-blue);
+      
+      @include autofill();
+      
+      @include desktop {
+        max-width: calc(100% - 45px);
+        padding: 14px 0 14px 16px;
+      }
+
+      &::placeholder{
+        color: var(--color-black);
+        opacity: 0.7;
+      }
+    }
+
+    button {
+      width: 32px;
+      height: 32px;
+      background-color: var(--color-blue);
+      border: 1px solid var(--color-blue);
+      border-radius: 5px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      
+      @include desktop {
+        width: 45px;
+        height: 45px;
+      }
+
+      svg {
+        width: 20px;
+        height: 20px;
+
+        path {
+          fill: var(--color-white);
+        }
+      }
+    }
+  }
+}
